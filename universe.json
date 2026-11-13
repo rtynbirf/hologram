@@ -1,194 +1,398 @@
 [
  {
-  "name": "singulyar",
-  "desc": "офлайн-вселенная караоке RUVSON, 64 песни",
-  "lang": "",
-  "cluster": "SINGULAR"
- },
- {
-  "name": "ruvson-rse2",
-  "desc": "",
-  "lang": "",
-  "cluster": "SINGULAR"
- },
- {
-  "name": "singulyar-llm",
-  "desc": "Qwen2.5-0.5B GGUF для СИНГУЛЯРА",
-  "lang": "",
-  "cluster": "SINGULAR"
- },
- {
-  "name": "karaoke-dream",
-  "desc": "",
-  "lang": "",
-  "cluster": "SINGULAR"
- },
- {
-  "name": "rumu",
-  "desc": "",
-  "lang": "",
-  "cluster": "SINGULAR"
- },
- {
-  "name": "cell-swarm",
-  "desc": "emergent repo organism",
-  "lang": "",
-  "cluster": "SWARM"
- },
- {
-  "name": "cell-rs",
-  "desc": "",
-  "lang": "",
-  "cluster": "SWARM"
- },
- {
-  "name": "runtime-protocol",
-  "desc": "",
-  "lang": "",
-  "cluster": "SWARM"
- },
- {
-  "name": "commons",
-  "desc": "",
-  "lang": "",
-  "cluster": "SWARM"
- },
- {
-  "name": "polymath-multiagent",
-  "desc": "parallel agent orchestration, MCP",
-  "lang": "",
-  "cluster": "SWARM"
- },
- {
-  "name": "polymat-hive",
-  "desc": "репозиторий-организм: агенты в GitHub Actions",
-  "lang": "",
-  "cluster": "SWARM"
- },
- {
-  "name": "domovoy-ritual",
-  "desc": "RITUAL-FSM, house_fsm.py",
-  "lang": "",
-  "cluster": "SWARM"
- },
- {
-  "name": "polymath-tools-atlas",
-  "desc": "665 AI tools, evidence-ranked",
-  "lang": "",
-  "cluster": "ATLASES"
- },
- {
-  "name": "voice-atlas-llm",
-  "desc": "Атлас-LLM: клонирование голоса",
-  "lang": "",
-  "cluster": "ATLASES"
- },
- {
-  "name": "global-video-platforms-registry",
-  "desc": "",
-  "lang": "",
-  "cluster": "ATLASES"
- },
- {
-  "name": "polymath-atlas-v107",
-  "desc": "honest evidence-audit framework in Lean 4",
-  "lang": "",
-  "cluster": "ATLASES"
- },
- {
-  "name": "polymath-os",
-  "desc": "sovereign machines",
-  "lang": "",
-  "cluster": "OS"
- },
- {
-  "name": "os-forge",
-  "desc": "",
-  "lang": "",
-  "cluster": "OS"
- },
- {
-  "name": "domovoy-tweaker",
-  "desc": "",
-  "lang": "",
-  "cluster": "OS"
- },
- {
-  "name": "neutral-browser",
-  "desc": "browser engine from scratch in Rust",
-  "lang": "",
-  "cluster": "OS"
- },
- {
-  "name": "cell65-host",
-  "desc": "Антицензор Chrome MV3",
-  "lang": "",
-  "cluster": "OS"
+  "name": ".github",
+  "desc": ".github — дефолтные community health files",
+  "lang": "Python",
+  "cluster": ""
  },
  {
   "name": "H-PE11-PHOENIX",
-  "desc": "",
-  "lang": "",
+  "desc": "PHOENIX-11: ворклог операций TH-* (журнал неповторимых результатов), сборки WinPE, сессии. Правила ведения — в rtynbirf/repo-doctrine.",
+  "lang": "PowerShell",
   "cluster": "OS"
  },
  {
-  "name": "polymath-gen",
-  "desc": "autonomous media agent with self-critique loop",
-  "lang": "",
-  "cluster": "AGENTS"
- },
- {
-  "name": "universal-agent",
-  "desc": "single-brain holistic agent, pure stdlib",
-  "lang": "",
-  "cluster": "AGENTS"
+  "name": "POLYMATH-ATLAS-GESTALT-CANON",
+  "desc": "Полимат-Атлас-Гештальт-Канон: Lean 4 формальный канон (301 модуль, 55388 строк, 2916 теорем). Дом=автомат: CI исполняет Устав — сборка, аксиомный свип ⊆ {propext, choice, Quot.sound}, отчёт, вычислимо",
+  "lang": "Lean",
+  "cluster": ""
  },
  {
   "name": "agryp",
-  "desc": "супервизор AI-агентов",
-  "lang": "",
+  "desc": "agryp — неспящий супервизор агентов уровня PID 1",
+  "lang": "C",
   "cluster": "AGENTS"
  },
  {
-  "name": "release-vault",
-  "desc": "encrypted off-site archive",
-  "lang": "",
-  "cluster": "VAULT"
+  "name": "cell-rs",
+  "desc": "Первая Rust-клетка роя: ядро контура сверки — Tolerance/reconcile/Phase, sha256, байт-цепь. Кровь одна во всех телах.",
+  "lang": "Python",
+  "cluster": "SWARM"
  },
  {
-  "name": "markitdown",
-  "desc": "",
-  "lang": "",
-  "cluster": "VAULT"
+  "name": "cell-swarm",
+  "desc": "РОЙ (Cell Swarm) — сингулярная эмерджентная архитектура: клетка, окно, указатели, храповик, семя",
+  "lang": "Python",
+  "cluster": "SWARM"
  },
  {
-  "name": "polimat-hub",
-  "desc": "",
-  "lang": "",
-  "cluster": "HUB"
+  "name": "cell65-host",
+  "desc": "cell65-host — Антицензор (Chrome MV3): PAC/DNR/WebRTC-защита, hosts-блокировка, обход блокировок",
+  "lang": "JavaScript",
+  "cluster": "OS"
+ },
+ {
+  "name": "combain-v2",
+  "desc": "COMBAIN v2 — self-hosted messenger",
+  "lang": "JavaScript",
+  "cluster": ""
+ },
+ {
+  "name": "commons",
+  "desc": "COMMONS — один организм из лучших открытых проектов: геном-спеки, синапсы MCP, кровь событий, иммунитет-лицензии. Органы остаются на upstream — единым становится обмен. ЦЕЛОЕ = ЧЕЛОВЕК > суммы частей.",
+  "lang": "Python",
+  "cluster": "SWARM"
+ },
+ {
+  "name": "domovenok",
+  "desc": "🏠 Командный центр дома: задачи, комнаты, расходы и индекс порядка. Next.js 16 · TypeScript · Prisma · Vitest · зелёный CI",
+  "lang": "TypeScript",
+  "cluster": ""
+ },
+ {
+  "name": "domovoy",
+  "desc": "КНИГА ДОМОВОГО",
+  "lang": "PowerShell",
+  "cluster": ""
+ },
+ {
+  "name": "domovoy-ritual",
+  "desc": "Ритуал дома как конечный автомат: поработал → сделал → убрал за собой. S0-покой гарантирован. FSM: устав + исполняемый автомат (stdlib-only).",
+  "lang": "Python",
+  "cluster": "SWARM"
+ },
+ {
+  "name": "domovoy-tweaker",
+  "desc": "ДОМОВОЙ / MEGA=TWEAKER — Windows tweaker as a state, not an event: change ledger, drift sentinel, per-feature undo, effect verification. PowerShell prototype.",
+  "lang": "PowerShell",
+  "cluster": "OS"
+ },
+ {
+  "name": "door-zero",
+  "desc": "Door Zero: дверь без контента. PID 0 системы: удаление ломает boot. GET -> 204, POST/PUT -> 403 Void.",
+  "lang": "Shell",
+  "cluster": ""
  },
  {
   "name": "edinyy-svod",
-  "desc": "каталог всех миров вселенной",
+  "desc": "ЕДИНЫЙ СВОД",
   "lang": "",
   "cluster": "HUB"
  },
  {
-  "name": "revo",
-  "desc": "runnable-прототип метода",
+  "name": "ekonomika",
+  "desc": "КНИГА ЭКОНОМИКИ",
+  "lang": "Python",
+  "cluster": ""
+ },
+ {
+  "name": "ekspozicii",
+  "desc": "КНИГА ЭКСПОЗИЦИЙ",
+  "lang": "HTML",
+  "cluster": ""
+ },
+ {
+  "name": "free-man",
+  "desc": "FREE MAN — Browser Autonomy (Chrome MV3): local-first противослежащий близнец cell65-host. 72 трекер-домена, пауза по сайту, счётчик на иконке, стирание данных сайта, 7-дневный план самоосвобождения. ",
+  "lang": "JavaScript",
+  "cluster": ""
+ },
+ {
+  "name": "github-doctrine",
+  "desc": "КНИГА ДОКТРИНЫ",
+  "lang": "Python",
+  "cluster": ""
+ },
+ {
+  "name": "github-runbook",
+  "desc": "Ранбук: настройка GitHub-репозитория человеком для человека — все флаги Settings, ветки и защита (Free vs Pro), безопасность, проверенная API-шпаргалка, журнал верификации",
+  "lang": "Python",
+  "cluster": ""
+ },
+ {
+  "name": "global-video-platforms-registry",
+  "desc": "Верифицированный реестр 1071 видеоплатформ (1032 активных) — окт 2026. CSV/JSON/XLSX/PDF + методология + evidence",
+  "lang": "Python",
+  "cluster": "ATLASES"
+ },
+ {
+  "name": "hologram",
+  "desc": "осколок знает целое: Merkle-осколки + Рид-Соломон (Целое из любых k из n), 64 репо вселенной, стратегия слоёв",
+  "lang": "Python",
+  "cluster": ""
+ },
+ {
+  "name": "index",
+  "desc": "SSOT-хаб: реестр проектов, проверенные SHA, конституция веса",
+  "lang": "Python",
+  "cluster": ""
+ },
+ {
+  "name": "karaoke-dream",
+  "desc": "Браузерное караоке мечты: неон, гид-вокал, оценка голоса в реальном времени и Зелёный коридор — тональность подстраивается под певца. Vanilla JS + WebAudio, zero-dependency.",
+  "lang": "JavaScript",
+  "cluster": "SINGULAR"
+ },
+ {
+  "name": "khozyain",
+  "desc": "ХОЗЯИН ДОМА — аккаунт-уровневый автомат состояния: зелёные main, живые триггеры, ноль открытых состояний и ноль уведомлений. Слой 3 дома поверх repo-doctrine и domovoy-ritual",
+  "lang": "Python",
+  "cluster": ""
+ },
+ {
+  "name": "language-through-the-ages",
+  "desc": "Язык сквозь эпохи — автономная HTML-экспозиция: семь способов мыслить язык (7 эпох × 7 гарнитур, эпистемические комментарии)",
+  "lang": "HTML",
+  "cluster": ""
+ },
+ {
+  "name": "lean-canon",
+  "desc": "КНИГА LEAN-КАНОНА",
+  "lang": "Lean",
+  "cluster": ""
+ },
+ {
+  "name": "linguistic-code",
+  "desc": "Самодостаточный философский артефакт о языке, теле и опыте. δ requires body.",
+  "lang": "Python",
+  "cluster": ""
+ },
+ {
+  "name": "markitdown",
+  "desc": "MarkItDown",
+  "lang": "Python",
+  "cluster": "VAULT"
+ },
+ {
+  "name": "neutral-browser",
+  "desc": "Neutral Browser — НЕЙТРАЛЬНЫЙ БРАУЗЕР ПОЛЬЗОВАТЕЛЯ",
+  "lang": "Rust",
+  "cluster": "OS"
+ },
+ {
+  "name": "nous",
+  "desc": "НОУС — эмерджентное сингулярное репо: конституция для человека и агентов, ТЗ форжа ISO, дорожная карта, контур исполнения",
+  "lang": "Python",
+  "cluster": ""
+ },
+ {
+  "name": "os-forge",
+  "desc": "OS-FORGE v0.1.1 — самодостаточный автономный батник: карта среды (железо+ОС по фактам) → решение → сеть (репозиторий пунктов) → сборка актуальной ОС → готовый ISO с манифестом. Windows (cmd+PowerShell",
+  "lang": "Shell",
+  "cluster": "OS"
+ },
+ {
+  "name": "polimat-hub",
+  "desc": "POLIMAT-HUB: место сверок мультиагента-архитектора. Архитектура, журнал операций, пломбы, stdlib-инструменты.",
+  "lang": "Python",
+  "cluster": "HUB"
+ },
+ {
+  "name": "polimat-task174",
+  "desc": "ПОЛИМАТ · TASK174 — протокол проверки канона по строкам: пломбы sha256, ловушки, Б25.8 приёмка чужаком. Канон v5.1.2 [В]; «ключ внутри» [О]; «протокол работает» [Н]. Прогон 3 — связка красной нити.",
+  "lang": "Python",
+  "cluster": ""
+ },
+ {
+  "name": "polymat-hive",
+  "desc": "🐝 Живой репозиторий-организм: экипаж автономных AI-агентов в GitHub Actions — Copilot, локальный GGUF-нейромозг или инстинкты. Открой issue — экипаж ответит.",
   "lang": "",
+  "cluster": "SWARM"
+ },
+ {
+  "name": "polymath-atlas",
+  "desc": "Operational System Atlas - Lean 4 Gestalt audit: 7 modules, zero sorry, verbatim imperial session archive",
+  "lang": "",
+  "cluster": ""
+ },
+ {
+  "name": "polymath-atlas-v107",
+  "desc": "POLYMATH-ATLAS v107.1-FINAL — honest evidence-audit framework in Lean 4. VERIFIED ENGINEERING FRAMEWORK (prototype), not a theorem prover. Open verification protocol in README.",
+  "lang": "Lean",
+  "cluster": "ATLASES"
+ },
+ {
+  "name": "polymath-core",
+  "desc": "КНИГА ПОЛИМАТ-ЯДРА",
+  "lang": "",
+  "cluster": ""
+ },
+ {
+  "name": "polymath-gen",
+  "desc": "ПОЛИМАТ-ГЕН: автономный медиа-агент — задание человека -> промпт -> изображение/видео -> самокритика -> доработка. LLM-мозг + open-source руки (ComfyUI/FLUX/Wan2.2)",
+  "lang": "Python",
+  "cluster": "AGENTS"
+ },
+ {
+  "name": "polymath-multiagent",
+  "desc": "🧠 Полимат = Мультиагент — параллельная оркестрация ИИ-агентов, где одно другое не исключает | Parallel multi-agent orchestration: skills complement, never exclude",
+  "lang": "Python",
+  "cluster": "SWARM"
+ },
+ {
+  "name": "polymath-os",
+  "desc": "Personal sovereign media-OS. 5-layer LFS-style self-bootstrapping repo. SINGULYAR Emergent Intent Runtime v0.6. 35 ADRs. make verify 33/33. 290 tests green.",
+  "lang": "Python",
+  "cluster": "OS"
+ },
+ {
+  "name": "polymath-stckg-core",
+  "desc": "ST-CKG → Lean 4 bridge contract: 11 machine-verified theorems, 0 sorry, kernel-audited axiom surface. GATE 7R runs as CI — the contract defends itself.",
+  "lang": "Lean",
+  "cluster": ""
+ },
+ {
+  "name": "polymath-tools-atlas",
+  "desc": "ПОЛИМАТ · TOOLS-ATLAS — каталог 665 AI-инструментов по контракту ГОЛОГРАММА v1 (6 слоёв, 3 статуса, закон цепочек). 147 local vs 151 cloud. 3 конфигурации железа. 12 софт-компонентов. Пломбы SHA256. П",
+  "lang": "HTML",
+  "cluster": "ATLASES"
+ },
+ {
+  "name": "red-thread-debt-audit",
+  "desc": "КРАСНАЯ НИТЬ — аудит динамики суверенного долга: долговая яма = рента. Канон v8.0, матрица переходов 230×17 (10 кейсов), кросс-слой R10 (VA1–VA5, PB1–PB6), движок КОЛЬЦО-1 v1–v8. FACT/CALCULATED/MODEL",
+  "lang": "Python",
+  "cluster": ""
+ },
+ {
+  "name": "release-vault",
+  "desc": "release-vault — Шифрованное хранилище релизных ассетов",
+  "lang": "Python",
+  "cluster": "VAULT"
+ },
+ {
+  "name": "rent-mechanism-q43",
+  "desc": "Рентный механизм: ядро Q43 v2, шесть законов L1-L6, инвариант I_K. Машинная программа R11-R49 (наблюдение -> атака -> патч).",
+  "lang": "Python",
+  "cluster": ""
+ },
+ {
+  "name": "repo-doctrine",
+  "desc": "Доктрина настройки GitHub-репозиториев: человеком для человека. Чек-листы флагов, защита веток, токены, конвенции агентов, аварийные процедуры, карта аккаунта.",
+  "lang": "Python",
+  "cluster": ""
+ },
+ {
+  "name": "revo",
+  "desc": "REVO — автономный прототип метода Reve: layout → render",
+  "lang": "Python",
   "cluster": "HUB"
  },
  {
   "name": "rtynbirf",
-  "desc": "",
-  "lang": "",
+  "desc": "ЧЕЛОВЕК=АККАУНТ=PID1 · ПОЛИМАТ=МУЛЬТИАГЕНТ · живая кузня: рой агентов, офлайн-вселенная, ни одного стороннего виджета",
+  "lang": "Python",
   "cluster": "HUB"
  },
  {
   "name": "rtynbirf.github.io",
-  "desc": "",
-  "lang": "",
+  "desc": "ЛАКОРНИЯ · MEGA-PLAYER SINGULYAR",
+  "lang": "HTML",
   "cluster": "HUB"
+ },
+ {
+  "name": "rumu",
+  "desc": "⚡ СИНГУЛЯР РУМУ — Sovereign BL/GL Streaming. P2P+autopilot, NO corporate. 249 тайтлов. Держатель имени; код — веткой rumu в singulyar. (Восстановлен Полиматом из пломбы polimat-vault 2026-11-08)",
+  "lang": "",
+  "cluster": "SINGULAR"
+ },
+ {
+  "name": "runtime-protocol",
+  "desc": "Клетка роя cell-swarm: исполнимая модель динамики узла (уравнение ρ̇, GENESIS_EXEC, VOLATILE_META, CANCER_FILTER). stdlib-only, офлайн.",
+  "lang": "Python",
+  "cluster": "SWARM"
+ },
+ {
+  "name": "ruvson",
+  "desc": "КНИГА RUVSON",
+  "lang": "Python",
+  "cluster": ""
+ },
+ {
+  "name": "ruvson-lyrics",
+  "desc": "RUVSON — тексты 65 треков: черновики, пайплайн, финальный ZIP",
+  "lang": "JavaScript",
+  "cluster": ""
+ },
+ {
+  "name": "ruvson-rse2",
+  "desc": "RUVSON SINGULARITY ENGINE v2 (RSE-2): станок одной песни Шаг 0-6 на мировых трендах 2023-2026 (Mel-Band RoFormer, Seed-VC, OpenVoice+петля, kNN-VC, CREPE-судья). Голос RUVSON.",
+  "lang": "Python",
+  "cluster": "SINGULAR"
+ },
+ {
+  "name": "singulyar",
+  "desc": "СИНГУЛЯР — офлайн-вселенная караоке RUVSON: 64 песни × 200 языков · ОРКЕСТРАТОР ·15 · хаб + 45 дверей · PWA (офлайн, без слежки)",
+  "lang": "HTML",
+  "cluster": "SINGULAR"
+ },
+ {
+  "name": "singulyar-llm",
+  "desc": "Локальная модель СИНГУЛЯРА: Qwen2.5-0.5B-Instruct GGUF частями + инструкционный слой (ОБУЧЕНИЕ). Веса Apache-2.0, генерация — в браузере человека.",
+  "lang": "Python",
+  "cluster": "SINGULAR"
+ },
+ {
+  "name": "task-graph-propagator",
+  "desc": "Task Graph Engine: один пропагатор — все функции структуры графа задач (полукольца, Кана, критпуть, резервы, надёжность, крэшинг)",
+  "lang": "Python",
+  "cluster": ""
+ },
+ {
+  "name": "uace",
+  "desc": "КНИГА UACE",
+  "lang": "JavaScript",
+  "cluster": ""
+ },
+ {
+  "name": "uace-pml",
+  "desc": "UACE x PML — Universal AI Chat Exporter (Evidence First, PML-PANEL 1.0 / PML-STRUCT canon). Final: v29.0.1-evidence",
+  "lang": "JavaScript",
+  "cluster": ""
+ },
+ {
+  "name": "uace-polymat",
+  "desc": "UACE x PML — POLYMAT UNIFIED userscripts + Cookie Vault MV3 extension. 0 network. Machine-verified releases.",
+  "lang": "JavaScript",
+  "cluster": ""
+ },
+ {
+  "name": "universal-agent",
+  "desc": "UniversalAgent (TsUA) - single-brain holistic agent: one LLM core, closed perception-action loop, four-layer memory, sandboxed tools. Pure stdlib.",
+  "lang": "Python",
+  "cluster": "AGENTS"
+ },
+ {
+  "name": "voice-atlas-llm",
+  "desc": "Атлас-LLM: модель-эксперт по клонированию голоса (дизентанглмент, TTS/VC/SVC/SVS) — LoRA-обучение на корпусе атласа 2026, RAG, гейты качества",
+  "lang": "Python",
+  "cluster": "ATLASES"
+ },
+ {
+  "name": "web-evolution-1991-2026",
+  "desc": "Эволюция Веба 1991→2026 — автономная HTML-экспозиция: 5 эпох, таймлайн, WCAG+APCA, один файл 267 КБ, ноль внешних запросов",
+  "lang": "HTML",
+  "cluster": ""
+ },
+ {
+  "name": "windows-chronicle",
+  "desc": "Полная хроника Microsoft Windows 1985-2026: все версии, боли пользователей, продвижение, рейтинг двух полюсов",
+  "lang": "Python",
+  "cluster": ""
+ },
+ {
+  "name": "yazyk-skvoz-epohi",
+  "desc": "Язык сквозь эпохи · Дом-Автомат v21 — семиэпохальное эссе, построенное как детерминированный конечный автомат (DFA). Seven epochs × seven cyrillic fonts × three story layers, shipped as a finite autom",
+  "lang": "HTML",
+  "cluster": ""
  }
 ]

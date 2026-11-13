@@ -1,162 +1,298 @@
 {
  "hologram": 1,
- "root": "eac93d8d10b14635d26be0efb373237ebc664a18327a594669750ba9147ca65d",
- "n": 32,
+ "root": "9d9c679c7b3873b43217266d89b7bd77c43b65f35abc42d64c7f735d9a7dbc03",
+ "n": 66,
  "r": 3,
  "self": {
   "name": "singulyar",
-  "desc": "офлайн-вселенная караоке RUVSON, 64 песни",
-  "lang": "",
+  "desc": "СИНГУЛЯР — офлайн-вселенная караоке RUVSON: 64 песни × 200 языков · ОРКЕСТРАТОР ·15 · хаб + 45 дверей · PWA (офлайн, без слежки)",
+  "lang": "HTML",
   "cluster": "SINGULAR"
  },
  "index": [
   {
+   "name": ".github",
+   "hash": "349a71a6570f9a86946311fa1e8685b94300d0f807b8da6e2ddec429f1307165"
+  },
+  {
    "name": "H-PE11-PHOENIX",
-   "hash": "bc16d26c0fc7f6479f8f87f32854b3cec2043088f1d5d85b270db812e1375777"
+   "hash": "870ad1fb751b8b663497ed4722dbcd46f80b14dff4c606aa208e41d7904a700d"
+  },
+  {
+   "name": "POLYMATH-ATLAS-GESTALT-CANON",
+   "hash": "2f1b0f9a0779c2aa1885afcd5cd1af1090a4d625274c5edb06ae7e47219710eb"
   },
   {
    "name": "agryp",
-   "hash": "c57ca9189d88cb4dbcdd46153e4d4de9da237e0f6c2bf5090d6b2e0004b29ab7"
+   "hash": "9907a01f32b61e9fe0ab2d3211ff6e71ef3efd587307a09a9714fcacc9be0406"
   },
   {
    "name": "cell-rs",
-   "hash": "b9adabe4fc63d42bd6bbee6441ca818ce9d7b18f2360157f786365b1fe853313"
+   "hash": "c4c52122ff4354cef24c6a7c8be82bfdccbeb8fdabc467f21b8ecaa40dbd8e57"
   },
   {
    "name": "cell-swarm",
-   "hash": "f51d45d9960d9d837f73d6dff7bb225400148ffbf42e6bba54bf9086a1126f19"
+   "hash": "63bc4d61eea6c39dea04b243c0a93d160ac79e29160d04d22842e121754ae043"
   },
   {
    "name": "cell65-host",
-   "hash": "914a75abc15b1ddedaeabe6eae748cb2677ea79b8dfa1fcfecd1cd417cf45df4"
+   "hash": "0011a84a18f983586b4dffacd2effa6457b55ff208b569acee8fc4bff7ee6ef4"
+  },
+  {
+   "name": "combain-v2",
+   "hash": "f07fc5cbe21485fa26e3dd710f7e0a9fe13a09c11b4a386da402d16cfc72b257"
   },
   {
    "name": "commons",
-   "hash": "395bea71a3fa7474e79545c85322647a0d856f8c754a068147d1d4f94ea59cfd"
+   "hash": "00bf7a48c328bf939c5ec37f413b7ef4ab7a23f8618e57bd916cdc57ece83942"
+  },
+  {
+   "name": "domovenok",
+   "hash": "e56a46c74ad51bcbb2320cb1e22f7682707ce78591845558ac713659a1453f17"
+  },
+  {
+   "name": "domovoy",
+   "hash": "cb1596077fbd7de9c6eb4ee186d3083d7b32f9f9d3623c4e768e1eeb71350d12"
   },
   {
    "name": "domovoy-ritual",
-   "hash": "b3738c19987853d38e9411bdb92ef6893b6424f1e4268669cc442cb0ac84c9bf"
+   "hash": "ce638aab00e7055809b4079a026a5ffc75275d628eed806adf7aa85bf1cfc1b3"
   },
   {
    "name": "domovoy-tweaker",
-   "hash": "d1331027fd29266e7f8f56269ce698e48d922659aab61a01217d344035123a54"
+   "hash": "00810f6f4ab8ee130c788939728a87e1cb9de44721963ab40b50373b1c3dc397"
+  },
+  {
+   "name": "door-zero",
+   "hash": "c356af39db7ffcff0e6126c45788efdb3f9ab1beb4a012c1e2b84bae8eb26e7f"
   },
   {
    "name": "edinyy-svod",
-   "hash": "9023ba428c40d304d2047745132047f4a70b4393077f2f3eec52ac6d0abcac0c"
+   "hash": "d3eea421ef31030b1ca19ebfc8f539473d450b96d1414dc680cfc8266facfd4b"
+  },
+  {
+   "name": "ekonomika",
+   "hash": "9eba7c28ae898b3542107abdda3c71adae5fb2ba3b97e5a79805e13b23e6abb8"
+  },
+  {
+   "name": "ekspozicii",
+   "hash": "750ab23a4fc0f56ca89707239f474bc1a96897f029480948e42d2afc285d33dc"
+  },
+  {
+   "name": "free-man",
+   "hash": "07cb74446195a0bea132d23b75e557d74fc6d53e4aa236317eee67f9bf1360eb"
+  },
+  {
+   "name": "github-doctrine",
+   "hash": "0260a0facea87359410b615cd4f3f7ace373d28b244f0d484a5204f45233389b"
+  },
+  {
+   "name": "github-runbook",
+   "hash": "b43c56fbd53cef44fcf11652a1947c2cebc2aa3b616a806ecc66730bd1169751"
   },
   {
    "name": "global-video-platforms-registry",
-   "hash": "e9c053a3a46dd8592b6eb029c6d3e3ab5118060109b17e820e51cf33018f9653"
+   "hash": "c2ebb3ad4f5e61889665fa4eecaf3529fb3bd7f6aac205a3c4ad16bd5eef0870"
+  },
+  {
+   "name": "hologram",
+   "hash": "0f949366ccd47c33a83fa4541208e5d5a0ce9151729aef754eaa57fbfe81066f"
+  },
+  {
+   "name": "index",
+   "hash": "10fe1d26ed92e1d2ae38c8bea3cb33af6dcebc6f0688e2361a0b5276af79b50d"
   },
   {
    "name": "karaoke-dream",
-   "hash": "285703867d6c96d91605a030dffba31f64ea276ba6e847354546aa0a61507f8d"
+   "hash": "50394affadfef6882d31ffbb7febe3621a8e5a3897eb6fd22146055410ef1796"
+  },
+  {
+   "name": "khozyain",
+   "hash": "780bb998e0f25765395aeaabb67fe45f16f6087a0c6fb6b028fba264ff3a791c"
+  },
+  {
+   "name": "language-through-the-ages",
+   "hash": "bd1d6d0c4b6d42a745e9fa0def89e93c3137570ab3eff6111ac1ec2bd2fae37f"
+  },
+  {
+   "name": "lean-canon",
+   "hash": "3d926ab6bae3e67e934cac324ca26c8f7f2f5713fce07bb58dee394d86157b59"
+  },
+  {
+   "name": "linguistic-code",
+   "hash": "ff5c35ab7719a757e42f2e4a667538b3cd9e9cc3de9bfd69233909979f097941"
   },
   {
    "name": "markitdown",
-   "hash": "d1c3788e40ea8c919ec7bfc86b950805d8dcf730ed14e4535047e680f4359a44"
+   "hash": "45ce8d2f592c9021f47dce13600da787b425f2ee8f02ddf06e44b8274ef0d666"
   },
   {
    "name": "neutral-browser",
-   "hash": "37ede2c57a8ed50808fa06d9fe0fa73224266388be8cd69336de7679ce4271f7"
+   "hash": "b0de5f29c3fa7c8120dc175e44bfa1376841f0e5bcfeaa60feaa768084365b26"
+  },
+  {
+   "name": "nous",
+   "hash": "9219d8358f892d9e08665fb74e0325c18daa2882dec77d0f42b25b938b01be58"
   },
   {
    "name": "os-forge",
-   "hash": "b6b5fe5e300e79b518e7b580579a19ccd61b42e58cc89fb609ae9a590368af07"
+   "hash": "c0d1093ec3d176aba1dcc3e645c46349605fc63a969c0be23f03267dd686ea42"
   },
   {
    "name": "polimat-hub",
-   "hash": "73dcdff060821175d59747fa160fb6df7234c40956182caba5d2c8f51bcd5c4b"
+   "hash": "7186714886ff5d117064c81d3e5492e60b1851f0978229ed3038f54603af6025"
+  },
+  {
+   "name": "polimat-task174",
+   "hash": "a884e6d60ac4097a1b0b4daf3d5dcfcc60f683fc65218869ae5e33fbc69a4ecb"
   },
   {
    "name": "polymat-hive",
-   "hash": "85f050572535d1bceb5d68d698bcff5b5334373dcaba5d621451ec2d1b2a236e"
+   "hash": "3a80fccce16edbd58597140ef7604f34ccc1ae5b7abb3ef6d246b84999ee6700"
+  },
+  {
+   "name": "polymath-atlas",
+   "hash": "1441788ff6b02b0f5d56e19d8327161bad3234bc195ed92b6e1c9f4065e44bb7"
   },
   {
    "name": "polymath-atlas-v107",
-   "hash": "552678ca47de3b871acaf66ad949fdead5c962f15648edad98e35f94942e8f6f"
+   "hash": "5b8f1ef14a195c50b713d0605b07231d015942de8c6be4b674cb70c1033bc3ed"
+  },
+  {
+   "name": "polymath-core",
+   "hash": "ad419478f8879f0d3ad7e9809020ff0f93f21a40394d998c77a22eb0975318b7"
   },
   {
    "name": "polymath-gen",
-   "hash": "057b089b9ddba737b397b8499fe5daa44d4a369bc2a513220d6aaf86a75b021c"
+   "hash": "c0b61ea9c443033d674e9c5ad106b08afb9b6a87e1789a4132ce18ff7986fd2b"
   },
   {
    "name": "polymath-multiagent",
-   "hash": "4876c96ef6970a64208045f98bf687a689e3d440e7fa83b030ce39b93ec62af9"
+   "hash": "a804046020eeef8813323cd4114636907a36533997e7be21f0d294703a42cb05"
   },
   {
    "name": "polymath-os",
-   "hash": "b4806287ae30a698fe202da2ae09bd75b7ed975cce20699128793954cc937715"
+   "hash": "0ca17f8b4601d25027aa6328c01007f08d21ab65d9954aa313ebe3f5636faefb"
+  },
+  {
+   "name": "polymath-stckg-core",
+   "hash": "26f162c58415f38fb98dc2881b18144ac47c3a804d91339b2004381073a5322b"
   },
   {
    "name": "polymath-tools-atlas",
-   "hash": "d86f58d4e406ea370ab80a32851360e9b01bb14fc96e7ab8b8fdb31827ef4202"
+   "hash": "4c39d20bd6af837f71ac1781123d23225978922ff387c86e0766ba3b835091df"
+  },
+  {
+   "name": "red-thread-debt-audit",
+   "hash": "738246536bc3708b974314056ab9c13659ece7cb2796376b438214717f74cf8f"
   },
   {
    "name": "release-vault",
-   "hash": "031e3d4b48ce9904f64b8a784c8df7d18bced30154cc84d520fd334d6c35af89"
+   "hash": "494dd2efef3c3883fec2128fc65b86bdb9c29efe031c057ba59f741717d3ed9d"
+  },
+  {
+   "name": "rent-mechanism-q43",
+   "hash": "d37a8fbbbc87f017ba4a98c44d02bf938299c009e495121e062af497403f06d4"
+  },
+  {
+   "name": "repo-doctrine",
+   "hash": "2274ff600e5e3f3e3d3c7149ea49828486e5c36d7f504f22660f218358ee3288"
   },
   {
    "name": "revo",
-   "hash": "b682abb522d6fd5c5a890012d1ec2ece35fbcd04ce0c34c7a690557d478f7c1f"
+   "hash": "9eb83e26cdc7a79e7df8ec6d0b46a775e046291ab8c6928c8e1adc0cbd6dfbeb"
   },
   {
    "name": "rtynbirf",
-   "hash": "b2f2e361caf9db0b33c24f02da84cf6b4b1e1083e3c28581e1ba15d68b95b246"
+   "hash": "d846f50f08c1360dea81b5493286ee832d95190767871912e7f5c9dbbf66843b"
   },
   {
    "name": "rtynbirf.github.io",
-   "hash": "1f21c70e3bd6e0ae16bf055b5643c49a3ba40d515d043d7cdb428a4c7b1ae37e"
+   "hash": "d273d2c45a682faa2b5eae66eb22f98d4405c643768c6c8b8014eddc1bb0b464"
   },
   {
    "name": "rumu",
-   "hash": "4a6cc39780b100d74ddf5592f8f14be4033ab0e5ecfed16607cd0ed9d48da399"
+   "hash": "d4e2091cdbfbdb63890186503fff6f8d40cb0070da3946f010482e48bd7bd6d8"
   },
   {
    "name": "runtime-protocol",
-   "hash": "3e5d46c20879b948e89d6f164c4181c0b14245119ff269f3cdee09e6c604b438"
+   "hash": "ad9e4317fcad3ade3129ff946035a7e0234cc9eb958301b2b187c14e62c53442"
+  },
+  {
+   "name": "ruvson",
+   "hash": "179468d0d334504f4752490c1288de125220c93e467685ca12d65343cf1e3b28"
+  },
+  {
+   "name": "ruvson-lyrics",
+   "hash": "ddeca7cfed5320981e6bf0087740dc056c36da009d72433a605af532cab82fd4"
   },
   {
    "name": "ruvson-rse2",
-   "hash": "10e249c32b988d9f5942c0f9e0c396463b06ddfd8a7993990d20b06e66b8dd27"
+   "hash": "0d70632812cb36cc9cbf07831723683780e47dc1e98e1c6318ff8fef573c4713"
   },
   {
    "name": "singulyar",
-   "hash": "b0fcf1c66d2cd3398758d1ddc2c034be085d9f0a8fe2451eeb0f09ebe5489ae5"
+   "hash": "21ba5a463af47e1c06a22fda648ee9ad0e5ddd59136eda965ef3127854b41ff5"
   },
   {
    "name": "singulyar-llm",
-   "hash": "42b5a929c1145a4d48f3a365411de406529b98ea959e0778136a13e719d426bc"
+   "hash": "459de4126c0b9d0ea6c5687799441e0610c09589a02659b24697520a06d3e29e"
+  },
+  {
+   "name": "task-graph-propagator",
+   "hash": "2e60d7c2423cf0064b1b01822520e7646af2c5f8d3a81e593221edb610e614db"
+  },
+  {
+   "name": "uace",
+   "hash": "d42629864b989e55c465dccaf84b742825d433e88f291f882c2b514848e2330e"
+  },
+  {
+   "name": "uace-pml",
+   "hash": "acb38501d820c486bd7e342a5ad9ef090dbd1cc32ad9f51bc76050d3b4e01722"
+  },
+  {
+   "name": "uace-polymat",
+   "hash": "2f0a0a18becd529b2b90ed742161c6fa71b144eebad573904c1ca3af4dbe9f51"
   },
   {
    "name": "universal-agent",
-   "hash": "8b4df1ce210d85b029f69c5a183a8c2c0e090f70f745710fb8577a9adb373e41"
+   "hash": "39de7a4df9fd4c0d968fcfa7c332de5a32a549dd76519e15efd9092ced8feb14"
   },
   {
    "name": "voice-atlas-llm",
-   "hash": "73d25bfed3db6a56832eeb67662e2548c561b404951bb13b1fa92443c6149626"
+   "hash": "316d2de26112e98b9cd10bda4949b1533916d0a949b94dc02a46d1c0498c936c"
+  },
+  {
+   "name": "web-evolution-1991-2026",
+   "hash": "9244559d293106cc0c38df641465f8fce6d626100f511f2a8219cf63d4a8ca2d"
+  },
+  {
+   "name": "windows-chronicle",
+   "hash": "1d96419185ba27170bf599249e7bcaf3be74d2cfb7931f01adf0f9ff14eea3bc"
+  },
+  {
+   "name": "yazyk-skvoz-epohi",
+   "hash": "de0df46af273e6d90efb2731a14536ac56381bd3680d442fbe68512e93167bdd"
   }
  ],
  "flesh": [
   {
-   "name": "agryp",
-   "desc": "супервизор AI-агентов",
-   "lang": "",
-   "cluster": "AGENTS"
-  },
-  {
-   "name": "domovoy-tweaker",
-   "desc": "",
-   "lang": "",
-   "cluster": "OS"
+   "name": "domovenok",
+   "desc": "🏠 Командный центр дома: задачи, комнаты, расходы и индекс порядка. Next.js 16 · TypeScript · Prisma · Vitest · зелёный CI",
+   "lang": "TypeScript",
+   "cluster": ""
   },
   {
    "name": "ruvson-rse2",
-   "desc": "",
-   "lang": "",
+   "desc": "RUVSON SINGULARITY ENGINE v2 (RSE-2): станок одной песни Шаг 0-6 на мировых трендах 2023-2026 (Mel-Band RoFormer, Seed-VC, OpenVoice+петля, kNN-VC, CREPE-судья). Голос RUVSON.",
+   "lang": "Python",
    "cluster": "SINGULAR"
+  },
+  {
+   "name": "windows-chronicle",
+   "desc": "Полная хроника Microsoft Windows 1985-2026: все версии, боли пользователей, продвижение, рейтинг двух полюсов",
+   "lang": "Python",
+   "cluster": ""
   }
  ]
 }
