@@ -1,0 +1,194 @@
+[
+ {
+  "name": "singulyar",
+  "desc": "офлайн-вселенная караоке RUVSON, 64 песни",
+  "lang": "",
+  "cluster": "SINGULAR"
+ },
+ {
+  "name": "ruvson-rse2",
+  "desc": "",
+  "lang": "",
+  "cluster": "SINGULAR"
+ },
+ {
+  "name": "singulyar-llm",
+  "desc": "Qwen2.5-0.5B GGUF для СИНГУЛЯРА",
+  "lang": "",
+  "cluster": "SINGULAR"
+ },
+ {
+  "name": "karaoke-dream",
+  "desc": "",
+  "lang": "",
+  "cluster": "SINGULAR"
+ },
+ {
+  "name": "rumu",
+  "desc": "",
+  "lang": "",
+  "cluster": "SINGULAR"
+ },
+ {
+  "name": "cell-swarm",
+  "desc": "emergent repo organism",
+  "lang": "",
+  "cluster": "SWARM"
+ },
+ {
+  "name": "cell-rs",
+  "desc": "",
+  "lang": "",
+  "cluster": "SWARM"
+ },
+ {
+  "name": "runtime-protocol",
+  "desc": "",
+  "lang": "",
+  "cluster": "SWARM"
+ },
+ {
+  "name": "commons",
+  "desc": "",
+  "lang": "",
+  "cluster": "SWARM"
+ },
+ {
+  "name": "polymath-multiagent",
+  "desc": "parallel agent orchestration, MCP",
+  "lang": "",
+  "cluster": "SWARM"
+ },
+ {
+  "name": "polymat-hive",
+  "desc": "репозиторий-организм: агенты в GitHub Actions",
+  "lang": "",
+  "cluster": "SWARM"
+ },
+ {
+  "name": "domovoy-ritual",
+  "desc": "RITUAL-FSM, house_fsm.py",
+  "lang": "",
+  "cluster": "SWARM"
+ },
+ {
+  "name": "polymath-tools-atlas",
+  "desc": "665 AI tools, evidence-ranked",
+  "lang": "",
+  "cluster": "ATLASES"
+ },
+ {
+  "name": "voice-atlas-llm",
+  "desc": "Атлас-LLM: клонирование голоса",
+  "lang": "",
+  "cluster": "ATLASES"
+ },
+ {
+  "name": "global-video-platforms-registry",
+  "desc": "",
+  "lang": "",
+  "cluster": "ATLASES"
+ },
+ {
+  "name": "polymath-atlas-v107",
+  "desc": "honest evidence-audit framework in Lean 4",
+  "lang": "",
+  "cluster": "ATLASES"
+ },
+ {
+  "name": "polymath-os",
+  "desc": "sovereign machines",
+  "lang": "",
+  "cluster": "OS"
+ },
+ {
+  "name": "os-forge",
+  "desc": "",
+  "lang": "",
+  "cluster": "OS"
+ },
+ {
+  "name": "domovoy-tweaker",
+  "desc": "",
+  "lang": "",
+  "cluster": "OS"
+ },
+ {
+  "name": "neutral-browser",
+  "desc": "browser engine from scratch in Rust",
+  "lang": "",
+  "cluster": "OS"
+ },
+ {
+  "name": "cell65-host",
+  "desc": "Антицензор Chrome MV3",
+  "lang": "",
+  "cluster": "OS"
+ },
+ {
+  "name": "H-PE11-PHOENIX",
+  "desc": "",
+  "lang": "",
+  "cluster": "OS"
+ },
+ {
+  "name": "polymath-gen",
+  "desc": "autonomous media agent with self-critique loop",
+  "lang": "",
+  "cluster": "AGENTS"
+ },
+ {
+  "name": "universal-agent",
+  "desc": "single-brain holistic agent, pure stdlib",
+  "lang": "",
+  "cluster": "AGENTS"
+ },
+ {
+  "name": "agryp",
+  "desc": "супервизор AI-агентов",
+  "lang": "",
+  "cluster": "AGENTS"
+ },
+ {
+  "name": "release-vault",
+  "desc": "encrypted off-site archive",
+  "lang": "",
+  "cluster": "VAULT"
+ },
+ {
+  "name": "markitdown",
+  "desc": "",
+  "lang": "",
+  "cluster": "VAULT"
+ },
+ {
+  "name": "polimat-hub",
+  "desc": "",
+  "lang": "",
+  "cluster": "HUB"
+ },
+ {
+  "name": "edinyy-svod",
+  "desc": "каталог всех миров вселенной",
+  "lang": "",
+  "cluster": "HUB"
+ },
+ {
+  "name": "revo",
+  "desc": "runnable-прототип метода",
+  "lang": "",
+  "cluster": "HUB"
+ },
+ {
+  "name": "rtynbirf",
+  "desc": "",
+  "lang": "",
+  "cluster": "HUB"
+ },
+ {
+  "name": "rtynbirf.github.io",
+  "desc": "",
+  "lang": "",
+  "cluster": "HUB"
+ }
+]

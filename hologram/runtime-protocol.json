@@ -1,0 +1,168 @@
+{
+ "hologram": 1,
+ "root": "eac93d8d10b14635d26be0efb373237ebc664a18327a594669750ba9147ca65d",
+ "n": 32,
+ "r": 3,
+ "self": {
+  "name": "runtime-protocol",
+  "desc": "",
+  "lang": "",
+  "cluster": "SWARM"
+ },
+ "index": [
+  {
+   "name": "H-PE11-PHOENIX",
+   "hash": "bc16d26c0fc7f6479f8f87f32854b3cec2043088f1d5d85b270db812e1375777"
+  },
+  {
+   "name": "agryp",
+   "hash": "c57ca9189d88cb4dbcdd46153e4d4de9da237e0f6c2bf5090d6b2e0004b29ab7"
+  },
+  {
+   "name": "cell-rs",
+   "hash": "b9adabe4fc63d42bd6bbee6441ca818ce9d7b18f2360157f786365b1fe853313"
+  },
+  {
+   "name": "cell-swarm",
+   "hash": "f51d45d9960d9d837f73d6dff7bb225400148ffbf42e6bba54bf9086a1126f19"
+  },
+  {
+   "name": "cell65-host",
+   "hash": "914a75abc15b1ddedaeabe6eae748cb2677ea79b8dfa1fcfecd1cd417cf45df4"
+  },
+  {
+   "name": "commons",
+   "hash": "395bea71a3fa7474e79545c85322647a0d856f8c754a068147d1d4f94ea59cfd"
+  },
+  {
+   "name": "domovoy-ritual",
+   "hash": "b3738c19987853d38e9411bdb92ef6893b6424f1e4268669cc442cb0ac84c9bf"
+  },
+  {
+   "name": "domovoy-tweaker",
+   "hash": "d1331027fd29266e7f8f56269ce698e48d922659aab61a01217d344035123a54"
+  },
+  {
+   "name": "edinyy-svod",
+   "hash": "9023ba428c40d304d2047745132047f4a70b4393077f2f3eec52ac6d0abcac0c"
+  },
+  {
+   "name": "global-video-platforms-registry",
+   "hash": "e9c053a3a46dd8592b6eb029c6d3e3ab5118060109b17e820e51cf33018f9653"
+  },
+  {
+   "name": "karaoke-dream",
+   "hash": "285703867d6c96d91605a030dffba31f64ea276ba6e847354546aa0a61507f8d"
+  },
+  {
+   "name": "markitdown",
+   "hash": "d1c3788e40ea8c919ec7bfc86b950805d8dcf730ed14e4535047e680f4359a44"
+  },
+  {
+   "name": "neutral-browser",
+   "hash": "37ede2c57a8ed50808fa06d9fe0fa73224266388be8cd69336de7679ce4271f7"
+  },
+  {
+   "name": "os-forge",
+   "hash": "b6b5fe5e300e79b518e7b580579a19ccd61b42e58cc89fb609ae9a590368af07"
+  },
+  {
+   "name": "polimat-hub",
+   "hash": "73dcdff060821175d59747fa160fb6df7234c40956182caba5d2c8f51bcd5c4b"
+  },
+  {
+   "name": "polymat-hive",
+   "hash": "85f050572535d1bceb5d68d698bcff5b5334373dcaba5d621451ec2d1b2a236e"
+  },
+  {
+   "name": "polymath-atlas-v107",
+   "hash": "552678ca47de3b871acaf66ad949fdead5c962f15648edad98e35f94942e8f6f"
+  },
+  {
+   "name": "polymath-gen",
+   "hash": "057b089b9ddba737b397b8499fe5daa44d4a369bc2a513220d6aaf86a75b021c"
+  },
+  {
+   "name": "polymath-multiagent",
+   "hash": "4876c96ef6970a64208045f98bf687a689e3d440e7fa83b030ce39b93ec62af9"
+  },
+  {
+   "name": "polymath-os",
+   "hash": "b4806287ae30a698fe202da2ae09bd75b7ed975cce20699128793954cc937715"
+  },
+  {
+   "name": "polymath-tools-atlas",
+   "hash": "d86f58d4e406ea370ab80a32851360e9b01bb14fc96e7ab8b8fdb31827ef4202"
+  },
+  {
+   "name": "release-vault",
+   "hash": "031e3d4b48ce9904f64b8a784c8df7d18bced30154cc84d520fd334d6c35af89"
+  },
+  {
+   "name": "revo",
+   "hash": "b682abb522d6fd5c5a890012d1ec2ece35fbcd04ce0c34c7a690557d478f7c1f"
+  },
+  {
+   "name": "rtynbirf",
+   "hash": "b2f2e361caf9db0b33c24f02da84cf6b4b1e1083e3c28581e1ba15d68b95b246"
+  },
+  {
+   "name": "rtynbirf.github.io",
+   "hash": "1f21c70e3bd6e0ae16bf055b5643c49a3ba40d515d043d7cdb428a4c7b1ae37e"
+  },
+  {
+   "name": "rumu",
+   "hash": "4a6cc39780b100d74ddf5592f8f14be4033ab0e5ecfed16607cd0ed9d48da399"
+  },
+  {
+   "name": "runtime-protocol",
+   "hash": "3e5d46c20879b948e89d6f164c4181c0b14245119ff269f3cdee09e6c604b438"
+  },
+  {
+   "name": "ruvson-rse2",
+   "hash": "10e249c32b988d9f5942c0f9e0c396463b06ddfd8a7993990d20b06e66b8dd27"
+  },
+  {
+   "name": "singulyar",
+   "hash": "b0fcf1c66d2cd3398758d1ddc2c034be085d9f0a8fe2451eeb0f09ebe5489ae5"
+  },
+  {
+   "name": "singulyar-llm",
+   "hash": "42b5a929c1145a4d48f3a365411de406529b98ea959e0778136a13e719d426bc"
+  },
+  {
+   "name": "universal-agent",
+   "hash": "8b4df1ce210d85b029f69c5a183a8c2c0e090f70f745710fb8577a9adb373e41"
+  },
+  {
+   "name": "voice-atlas-llm",
+   "hash": "73d25bfed3db6a56832eeb67662e2548c561b404951bb13b1fa92443c6149626"
+  }
+ ],
+ "flesh": [
+  {
+   "name": "H-PE11-PHOENIX",
+   "desc": "",
+   "lang": "",
+   "cluster": "OS"
+  },
+  {
+   "name": "karaoke-dream",
+   "desc": "",
+   "lang": "",
+   "cluster": "SINGULAR"
+  },
+  {
+   "name": "markitdown",
+   "desc": "",
+   "lang": "",
+   "cluster": "VAULT"
+  },
+  {
+   "name": "voice-atlas-llm",
+   "desc": "Атлас-LLM: клонирование голоса",
+   "lang": "",
+   "cluster": "ATLASES"
+  }
+ ]
+}
