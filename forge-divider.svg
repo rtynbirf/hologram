@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 46" width="1200" height="46">
+  <defs>
+    <linearGradient id="g_hologram" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5A6C8C" stop-opacity="0"/>
+      <stop offset="0.18" stop-color="#5A6C8C"/>
+      <stop offset="0.82" stop-color="#5A6C8C"/>
+      <stop offset="1" stop-color="#5A6C8C" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <line x1="40" y1="23" x2="540" y2="23" stroke="url(#g_hologram)" stroke-width="1.6"/>
+  <line x1="660" y1="23" x2="1160" y2="23" stroke="url(#g_hologram)" stroke-width="1.6"/>
+  <path d="M 600 9 L 614 23 L 600 37 L 586 23 Z" fill="#F2C464"/>
+  <path d="M 600 15 L 608 23 L 600 31 L 592 23 Z" fill="#0D1119"/>
+  <path d="M 560 17 L 568 23 L 560 29 L 552 23 Z" fill="#9FD8E8"/>
+  <path d="M 640 17 L 648 23 L 640 29 L 632 23 Z" fill="#9FD8E8"/>
+  <line x1="40" y1="8" x2="40" y2="38" stroke="#F2C464" stroke-width="1.4" opacity="0.7"/>
+  <line x1="1160" y1="8" x2="1160" y2="38" stroke="#F2C464" stroke-width="1.4" opacity="0.7"/>
+</svg>

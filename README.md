@@ -1,3 +1,15 @@
+<div align="center">
+  <img src="banner.png" width="100%" alt="осколок знает целое: Merkle-осколки + Рид-Соломон (Целое из частей)" />
+</div>
+
+<!--ФОРЖ:МУЗА:НАЧАЛО-->
+<div align="center">
+  <img src="repo-muse.svg" width="100%" alt="Муза hologram: мастерская МЕРКЛ · ОСКОЛКИ, кузня ПОЛИМАТ, раунд 12 · REVE=РЕВО" />
+  <br/>
+  <img src="forge-divider.svg" width="62%" alt="делитель мастерской МЕРКЛ · ОСКОЛКИ" />
+</div>
+<!--ФОРЖ:МУЗА:КОНЕЦ-->
+
 # hologram — осколок знает целое
 
 Один файл `hologram.py`, stdlib. Три команды:
