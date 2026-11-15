@@ -7,10 +7,11 @@
 
 Источник вселенной: GitHub API (GITHUB_TOKEN необязателен), иначе universe.json.
 """
-import argparse, hashlib, json, os, random, sys, urllib.request
+import argparse, hashlib, json, os, random, sys, urllib.error, urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 USER = "rtynbirf"
+API = "https://api.github.com"
 
 # Репо, исключённые из раздачи осколков (слой 1.2):
 # door-zero заморожена по построению (TZ-DOOR-ZERO-001): пустота не наполняется.
@@ -156,8 +157,26 @@ def cmd_curve(a):
         print(f"r={r}: k=1 -> {rows[0][1]*100:.0f}% плоти; k=n/3 -> {rows[n//3-1][1]*100:.0f}%; 95% плоти при k={pk(.95)}; 99% при k={pk(.99)}")
 
 def fetch_shard(name):
-    """Осколок репо: hologram.json из корня main (public raw, без замков)."""
-    url = f"https://raw.githubusercontent.com/{USER}/{name}/main/hologram.json"
+    """Осколок репо: hologram.json из корня дефолтной ветки (public raw, без замков).
+
+    Урок волны слоя 1.2: main hardcoded — косЯк. Дом зовёт ветки по-своему
+    (у singulyar дефолтная ветка 'rumu'). Порядок: main -> master -> API."""
+    for br in ("main", "master"):
+        url = f"https://raw.githubusercontent.com/{USER}/{name}/{br}/hologram.json"
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "hologram-verify"})
+            with urllib.request.urlopen(req, timeout=20) as resp:
+                return json.load(resp)
+        except urllib.error.HTTPError as e:
+            if e.code != 404:
+                raise
+    h = {"User-Agent": "hologram-verify"}
+    if os.environ.get("GITHUB_TOKEN"):
+        h["Authorization"] = "Bearer " + os.environ["GITHUB_TOKEN"]
+    req = urllib.request.Request(f"{API}/repos/{USER}/{name}", headers=h)
+    with urllib.request.urlopen(req, timeout=20) as resp:
+        br = json.load(resp)["default_branch"]
+    url = f"https://raw.githubusercontent.com/{USER}/{name}/{br}/hologram.json"
     req = urllib.request.Request(url, headers={"User-Agent": "hologram-verify"})
     with urllib.request.urlopen(req, timeout=20) as resp:
         return json.load(resp)

@@ -30,5 +30,9 @@ jobs:
           python3 hologram.py verify --dir /tmp/shards
       - name: слой 1.2 вживую — полная сборка из осколков в репо
         run: python3 hologram.py verify-remote
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # нестандартные имена дефолтных веток (дом зовёт их по-своему)
       - name: слой 1.2 критерий — случайные k = ceil(n/3) репо
         run: python3 hologram.py verify-remote --sample 22
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
