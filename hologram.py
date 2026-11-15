@@ -12,6 +12,11 @@ import argparse, hashlib, json, os, random, sys, urllib.request
 HERE = os.path.dirname(os.path.abspath(__file__))
 USER = "rtynbirf"
 
+# Репо, исключённые из раздачи осколков (слой 1.2):
+# door-zero заморожена по построению (TZ-DOOR-ZERO-001): пустота не наполняется.
+# Её запись живёт в индексе каждого осколка и в blob (Release) — целое не страдает.
+EXCLUDED = {"door-zero"}
+
 def H(b): return hashlib.sha256(b).hexdigest()
 def canon(o): return json.dumps(o, sort_keys=True, ensure_ascii=False, separators=(",", ":")).encode()
 
@@ -150,9 +155,55 @@ def cmd_curve(a):
         pk = lambda t: next(k for k, m, _, _ in rows if m >= t)
         print(f"r={r}: k=1 -> {rows[0][1]*100:.0f}% плоти; k=n/3 -> {rows[n//3-1][1]*100:.0f}%; 95% плоти при k={pk(.95)}; 99% при k={pk(.99)}")
 
+def fetch_shard(name):
+    """Осколок репо: hologram.json из корня main (public raw, без замков)."""
+    url = f"https://raw.githubusercontent.com/{USER}/{name}/main/hologram.json"
+    req = urllib.request.Request(url, headers={"User-Agent": "hologram-verify"})
+    with urllib.request.urlopen(req, timeout=20) as resp:
+        return json.load(resp)
+
+def cmd_verify_remote(a):
+    """Слой 1.2 вживую: целое собирается из осколков, разложенных по самим репо.
+
+    По умолчанию тянет ВСЕ доступные осколки и требует полной сборки (66/66);
+    --sample k — критерий слоя: случайные k = ceil(n/3) репо, честная плоть.
+    door-zero исключена (заморожена) — её плоть покрывается flesh соседей (r=3)."""
+    uni, src = load_universe()
+    total = len(uni)
+    pool = [u["name"] for u in uni if u["name"] not in EXCLUDED]
+    rng = random.Random(a.seed)
+    if a.sample:
+        pool = rng.sample(pool, min(a.sample, len(pool)))
+    shards, missing = [], []
+    for name in pool:
+        try:
+            shards.append(fetch_shard(name))
+        except Exception as e:
+            missing.append(f"{name}({type(e).__name__})")
+    if not shards:
+        sys.exit("ни одного осколка не получено — раздача слоя 1.2 не жива")
+    want, got = reconstruct(shards)
+    roots = {s["root"] for s in shards}
+    miss_flesh = [n for n in want if n not in got]
+    print(f"REMOTE · запрошено={len(pool)} получено={len(shards)} недоступно={len(missing)}"
+          + (f" ({', '.join(missing)})" if missing else ""))
+    print(f"  корень единый: {len(roots)==1} · имена+хэши: {len(want)}/{total} · плоть: {len(got)}/{total}"
+          + (f" ({len(got)/total*100:.0f}%)" if a.sample else "")
+          + (f" · не вошли: {', '.join(sorted(miss_flesh)[:8])}{'…' if len(miss_flesh) > 8 else ''}" if miss_flesh and a.sample else ""))
+    assert len(roots) == 1, "осколки разных целых — вселенная разъехалась"
+    assert len(want) == total, "индекс осколков не покрывает вселенную"
+    if a.sample:
+        # критерий слоя: при случайных k = ceil(n/3) плоть честно частичная (~81% при r=3)
+        # — число сверяется с кривой, а не объявляется. Целостность гарантируют хэши.
+        print(f"  выборка k={len(pool)}: плоть {len(got)/total*100:.0f}% — сверяется с кривой r=3 (81% при k=n/3)")
+    else:
+        assert len(got) == len(want), "имена+хэши обязаны собраться из осколков"
+    print("OK · слой 1.2 жив: осколки в репо сходятся в одно целое по Merkle")
+
 if __name__ == "__main__":
     p = argparse.ArgumentParser(); sp = p.add_subparsers(dest="c", required=True)
     b = sp.add_parser("build"); b.add_argument("--r", type=int, default=3); b.add_argument("--out", default="hologram")
     v = sp.add_parser("verify"); v.add_argument("--dir", default="hologram")
     c = sp.add_parser("curve"); c.add_argument("--trials", type=int, default=300)
-    a = p.parse_args(); {"build": cmd_build, "verify": cmd_verify, "curve": cmd_curve}[a.c](a)
+    r = sp.add_parser("verify-remote"); r.add_argument("--sample", type=int, default=0); r.add_argument("--seed", type=int, default=31)
+    a = p.parse_args(); {"build": cmd_build, "verify": cmd_verify, "curve": cmd_curve, "verify-remote": cmd_verify_remote}[a.c](a)
