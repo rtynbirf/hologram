@@ -16,7 +16,7 @@ API = "https://api.github.com"
 # Репо, исключённые из раздачи осколков (слой 1.2):
 # door-zero заморожена по построению (TZ-DOOR-ZERO-001): пустота не наполняется.
 # Её запись живёт в индексе каждого осколка и в blob (Release) — целое не страдает.
-EXCLUDED = {"door-zero"}
+EXCLUDED = {"door-zero", "karta", "fond-host", "lex-naturae", "singulyar-a0-audit"}  # door-zero frozen; others created after hologram build — no proper shards yet
 
 def H(b): return hashlib.sha256(b).hexdigest()
 def canon(o): return json.dumps(o, sort_keys=True, ensure_ascii=False, separators=(",", ":")).encode()
