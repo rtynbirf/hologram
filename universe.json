@@ -20,7 +20,7 @@
  {
   "name": "agryp",
   "desc": "agryp — неспящий супервизор агентов уровня PID 1",
-  "lang": "C",
+  "lang": "Python",
   "cluster": "AGENTS"
  },
  {
@@ -40,6 +40,12 @@
   "desc": "cell65-host — Антицензор (Chrome MV3): PAC/DNR/WebRTC-защита, hosts-блокировка, обход блокировок",
   "lang": "JavaScript",
   "cluster": "OS"
+ },
+ {
+  "name": "code",
+  "desc": "Код дома: скрипты и снипеты — место по канону §4",
+  "lang": "Shell",
+  "cluster": ""
  },
  {
   "name": "combain-v2",
@@ -80,13 +86,13 @@
  {
   "name": "door-zero",
   "desc": "Door Zero: дверь без контента. PID 0 системы: удаление ломает boot. GET -> 204, POST/PUT -> 403 Void.",
-  "lang": "Shell",
+  "lang": "Python",
   "cluster": ""
  },
  {
   "name": "edinyy-svod",
-  "desc": "ЕДИНЫЙ СВОД",
-  "lang": "",
+  "desc": "ЕДИНЫЙ СВОД — Конституция Хозяина 4.2: основной закон стенда «ЕДИНЫЙ ХОЗЯИН», 98 статей, XIX глав, стенд singulyar_host v3.2. РЕВО В ОСНОВЕ ВСЕГО · REVE=РЕВО",
+  "lang": "Python",
   "cluster": "HUB"
  },
  {
@@ -102,9 +108,15 @@
   "cluster": ""
  },
  {
+  "name": "fond-host",
+  "desc": "CORS-хост минус-фонда дома (Н-10 · ADR-0007): Pages отдаёт ACAO:* для лестницы WebAudio плееров",
+  "lang": "Python",
+  "cluster": ""
+ },
+ {
   "name": "free-man",
-  "desc": "FREE MAN — Browser Autonomy (Chrome MV3): local-first противослежащий близнец cell65-host. 72 трекер-домена, пауза по сайту, счётчик на иконке, стирание данных сайта, 7-дневный план самоосвобождения. ",
-  "lang": "JavaScript",
+  "desc": "FREE MAN 0.2.2 — browser autonomy for Chrome MV3. 108 tracker/ads/CNAME domains blocked 100% on-device. No account, no cloud, no telemetry.",
+  "lang": "Python",
   "cluster": ""
  },
  {
@@ -138,10 +150,28 @@
   "cluster": ""
  },
  {
+  "name": "invariant-manifest",
+  "desc": "МАНИФЕСТ ИНВАРИАНТА · FORK 3 · v0.2.3 · CONDITIONAL PASS · seed 7170 · stdlib-only · порождение должно мочь быть опровергнутым",
+  "lang": "Python",
+  "cluster": ""
+ },
+ {
   "name": "karaoke-dream",
   "desc": "Браузерное караоке мечты: неон, гид-вокал, оценка голоса в реальном времени и Зелёный коридор — тональность подстраивается под певца. Vanilla JS + WebAudio, zero-dependency.",
   "lang": "JavaScript",
   "cluster": "SINGULAR"
+ },
+ {
+  "name": "karta",
+  "desc": "КАРТА ВСЕЛЕННОЙ rtynbirf: генерируется из живых данных API, ни одного выдуманного числа. СВЕРКА = CRITIC: расхождение карты с территорией ловится, а не прячется. Ритуалы: СВЕРКА / ВЫЖИВАНИЕ / НОЧЬ-БЕЗ",
+  "lang": "Python",
+  "cluster": ""
+ },
+ {
+  "name": "kb",
+  "desc": "Знания дома: канон-тексты, гайды, досье — место по канону §4",
+  "lang": "",
+  "cluster": ""
  },
  {
   "name": "khozyain",
@@ -159,6 +189,12 @@
   "name": "lean-canon",
   "desc": "КНИГА LEAN-КАНОНА",
   "lang": "Lean",
+  "cluster": ""
+ },
+ {
+  "name": "lex-naturae",
+  "desc": "Lex Naturae — claim/evidence ledger. Separates observations from hypotheses, philosophical principles and institutional rules. Machine-verifiable: CSV cell extraction, excerpt verification, SHA-256 ar",
+  "lang": "Python",
   "cluster": ""
  },
  {
@@ -188,7 +224,7 @@
  {
   "name": "os-forge",
   "desc": "OS-FORGE v0.1.1 — самодостаточный автономный батник: карта среды (железо+ОС по фактам) → решение → сеть (репозиторий пунктов) → сборка актуальной ОС → готовый ISO с манифестом. Windows (cmd+PowerShell",
-  "lang": "Shell",
+  "lang": "Python",
   "cluster": "OS"
  },
  {
@@ -206,13 +242,13 @@
  {
   "name": "polymat-hive",
   "desc": "🐝 Живой репозиторий-организм: экипаж автономных AI-агентов в GitHub Actions — Copilot, локальный GGUF-нейромозг или инстинкты. Открой issue — экипаж ответит.",
-  "lang": "",
+  "lang": "Python",
   "cluster": "SWARM"
  },
  {
   "name": "polymath-atlas",
   "desc": "Operational System Atlas - Lean 4 Gestalt audit: 7 modules, zero sorry, verbatim imperial session archive",
-  "lang": "",
+  "lang": "Python",
   "cluster": ""
  },
  {
@@ -224,7 +260,7 @@
  {
   "name": "polymath-core",
   "desc": "КНИГА ПОЛИМАТ-ЯДРА",
-  "lang": "",
+  "lang": "Python",
   "cluster": ""
  },
  {
@@ -302,7 +338,7 @@
  {
   "name": "rumu",
   "desc": "⚡ СИНГУЛЯР РУМУ — Sovereign BL/GL Streaming. P2P+autopilot, NO corporate. 249 тайтлов. Держатель имени; код — веткой rumu в singulyar. (Восстановлен Полиматом из пломбы polimat-vault 2026-11-08)",
-  "lang": "",
+  "lang": "Python",
   "cluster": "SINGULAR"
  },
  {
@@ -331,9 +367,15 @@
  },
  {
   "name": "singulyar",
-  "desc": "СИНГУЛЯР — офлайн-вселенная караоке RUVSON: 64 песни × 200 языков · ОРКЕСТРАТОР ·15 · хаб + 45 дверей · PWA (офлайн, без слежки)",
+  "desc": "СИНГУЛЯР — офлайн-вселенная караоке RUVSON: 64 песни · 197 языков (цель 200) · ОРКЕСТРАТОР ·15 · хаб + 52 двери · PWA (офлайн, без слежки)",
   "lang": "HTML",
   "cluster": "SINGULAR"
+ },
+ {
+  "name": "singulyar-a0-audit",
+  "desc": "SINGULYAR × A0 — independent audit (PACKAGE VALID + BRIDGE VALID) and R4 port design",
+  "lang": "Python",
+  "cluster": ""
  },
  {
   "name": "singulyar-llm",
