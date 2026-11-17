@@ -13,10 +13,43 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 USER = "rtynbirf"
 API = "https://api.github.com"
 
-# Репо, исключённые из раздачи осколков (слой 1.2):
+# Репо, исключённые из раздачи осколков (слой 1.2) — замороженные по построению:
 # door-zero заморожена по построению (TZ-DOOR-ZERO-001): пустота не наполняется.
 # Её запись живёт в индексе каждого осколка и в blob (Release) — целое не страдает.
-EXCLUDED = {"door-zero", "karta", "fond-host", "lex-naturae", "singulyar-a0-audit"}  # door-zero frozen; others created after hologram build — no proper shards yet
+FROZEN = {"door-zero", "karta", "fond-host", "lex-naturae", "singulyar-a0-audit"}
+
+def archived_names():
+    """Замороженные-архив репо (GitHub archived: read-only по построению).
+
+    Осколок в архиве не живёт: записать туда новый нельзя, а плоть из мёртвой
+    клетки недостижима для сборки. Носитель плоти — только живая клетка.
+    Архивная запись ВСЁ РАВНО покрыта целым: имя+хэш в индексе каждого осколка,
+    плоть — в живых соседях (rendezvous по носителям). Без токена/при отказе —
+    честный фолбэк: пусто (локальные прогоны, тесты)."""
+    try:
+        out, page = set(), 1
+        while True:
+            req = urllib.request.Request(
+                f"https://api.github.com/users/{USER}/repos?per_page=100&page={page}&type=owner",
+                headers={"User-Agent": "hologram", **({"Authorization": "Bearer " + os.environ["GITHUB_TOKEN"]} if os.environ.get("GITHUB_TOKEN") else {})})
+            with urllib.request.urlopen(req, timeout=20) as resp:
+                data = json.load(resp)
+            if not data: break
+            out |= {r["name"] for r in data if r.get("archived")}
+            if len(data) < 100: break
+            page += 1
+        return out
+    except Exception as e:
+        print("архив-статусы недоступны (%s) — считаем все клетки живыми" % type(e).__name__, file=sys.stderr)
+        return set()
+
+def carriers(universe, archived=None):
+    """Носители осколков: живые, не замороженные клетки.
+
+    Индекс покрывает ВСЮ вселенную (имена+хэши — целое адресуемо целиком),
+    а плоть хранят и раздают только носители: живые минус замороженные."""
+    dead = FROZEN | (set() if archived is None else archived)
+    return [u["name"] for u in universe if u["name"] not in dead]
 
 def H(b): return hashlib.sha256(b).hexdigest()
 def canon(o): return json.dumps(o, sort_keys=True, ensure_ascii=False, separators=(",", ":")).encode()
@@ -57,16 +90,22 @@ def holders(rec_name, names, r):
     ranked = sorted(names, key=lambda s: H((rec_name + "|" + s).encode()))
     return set(ranked[:r])
 
-def build(universe, r):
+def build(universe, r, storage=None):
+    """Индекс — вся вселенная; осколки и плоть — только носители (storage).
+
+    Раньше плоть раскладывалась по всем именам: архивная клетка становилась
+    хранителем, и целое из живых осколков не собиралось (слой 1.2 краснел).
+    Теперь rendezvous считается по носителям — сборка из живых полна."""
     names = [x["name"] for x in universe]
     hs = {x["name"]: rec_hash(x) for x in universe}
     index = [{"name": n, "hash": hs[n]} for n in names]
     root = merkle([hs[n] for n in names])
     byname = {x["name"]: x for x in universe}
+    storage = storage if storage is not None else names
     shards = {}
-    for n in names:
-        flesh = [byname[m] for m in names if m != n and n in holders(m, names, r)]
-        shards[n] = {"hologram": 1, "root": root, "n": len(names), "r": r,
+    for n in storage:
+        flesh = [byname[m] for m in names if m != n and n in holders(m, storage, r)]
+        shards[n] = {"hologram": 1, "root": root, "n": len(names), "storage": len(storage), "r": r,
                      "self": byname[n], "index": index, "flesh": flesh}
     return shards, root
 
@@ -86,13 +125,15 @@ def reconstruct(shard_list):
 
 def cmd_build(a):
     uni, src = load_universe()
-    shards, root = build(uni, a.r)
+    arch = archived_names()
+    storage = carriers(uni, arch)
+    shards, root = build(uni, a.r, storage)
     os.makedirs(a.out, exist_ok=True)
     for n, s in shards.items():
         with open(os.path.join(a.out, n + ".json"), "w", encoding="utf-8") as f:
             json.dump(s, f, ensure_ascii=False, indent=1)
     size = sum(os.path.getsize(os.path.join(a.out, n + ".json")) for n in shards) // len(shards)
-    print(f"источник={src} · репо={len(uni)} · r={a.r} · корень={root[:16]}… · средний осколок={size} байт")
+    print(f"источник={src} · репо={len(uni)} · носителей={len(storage)} · заморожено={len(uni)-len(storage)} · r={a.r} · корень={root[:16]}… · средний осколок={size} байт")
 
 def cmd_verify(a):
     sh = [json.load(open(os.path.join(a.dir, f), encoding="utf-8")) for f in sorted(os.listdir(a.dir)) if f.endswith(".json")]
@@ -113,8 +154,8 @@ def cmd_verify(a):
     except ValueError: pass
     print(f"OK · осколков={len(sh)} · один осколок: целое в именах/хэшах 100%, плоть {len(g1)}/{len(want)} · подмена отвергается")
 
-def curve(uni, r, trials, rng):
-    shards, _ = build(uni, r)
+def curve(uni, r, trials, rng, storage=None):
+    shards, _ = build(uni, r, storage)
     names = list(shards); n = len(names); rows = []
     for k in range(1, n + 1):
         vals = []
@@ -127,10 +168,11 @@ def curve(uni, r, trials, rng):
     return rows
 
 def cmd_curve(a):
-    uni, src = load_universe(); n = len(uni); rng = random.Random(31)
+    uni, src = load_universe()
+    n = len(carriers(uni, archived_names())); rng = random.Random(31)
     out = {}
     for r in (1, 3, 5):
-        out[r] = curve(uni, r, a.trials, rng)
+        out[r] = curve(uni, r, a.trials, rng, carriers(uni, archived_names()))
     with open("curve.csv", "w") as f:
         f.write("r,k,mean_fidelity,p5_fidelity,min_fidelity\n")
         for r, rows in out.items():
@@ -184,12 +226,15 @@ def fetch_shard(name):
 def cmd_verify_remote(a):
     """Слой 1.2 вживую: целое собирается из осколков, разложенных по самим репо.
 
-    По умолчанию тянет ВСЕ доступные осколки и требует полной сборки (66/66);
-    --sample k — критерий слоя: случайные k = ceil(n/3) репо, честная плоть.
-    door-zero исключена (заморожена) — её плоть покрывается flesh соседей (r=3)."""
+    По умолчанию тянет ВСЕ осколки живых носителей и требует полной сборки;
+    --sample k — критерий слоя: случайные k = ceil(носители/3), честная плоть.
+    Замороженные и архивы (read-only) осколков не несут — их запись живёт
+    в индексе каждого осколка, плоть — в живых соседях (r=3)."""
     uni, src = load_universe()
     total = len(uni)
-    pool = [u["name"] for u in uni if u["name"] not in EXCLUDED]
+    arch = archived_names()
+    pool = carriers(uni, arch)
+    print(f"  носители: {len(pool)} · заморожено-архив: {total - len(pool)} ({', '.join(sorted(FROZEN))[:40]}… + архив {len(arch)})")
     rng = random.Random(a.seed)
     if a.sample:
         pool = rng.sample(pool, min(a.sample, len(pool)))
