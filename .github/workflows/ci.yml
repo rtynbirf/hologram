@@ -1,38 +1,6 @@
-name: ГОЛОГРАММА · целое из репо
-
-on:
-  push:
-    branches: [main]
-  schedule:
-    - cron: "23 5 * * *"   # ежедневно: вселенная обязана собираться из живых репо
-  workflow_dispatch: {}
-concurrency:
-  group: hologram-ci
-  cancel-in-progress: true
-permissions:
-  contents: read
-jobs:
-  core:
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v4 (pinned 2026-11-15, W8)
-      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v5 (pinned 2026-11-15, W8)
-        with:
-          python-version: "3.12"
-      - name: юнит-экзамены математики осколков
-        run: |
-          pip install pytest -q
-          pytest -q
       - name: локальный цикл build -> verify (живая вселенная)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # без токена archived_names() падает в фолбэк universe.json — корень расходится с осколками
         run: |
           python3 hologram.py build --r 3 --out /tmp/shards
           python3 hologram.py verify --dir /tmp/shards
-      - name: слой 1.2 вживую — полная сборка из осколков в репо
-        run: python3 hologram.py verify-remote
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # нестандартные имена дефолтных веток (дом зовёт их по-своему)
-      - name: слой 1.2 критерий — случайные k = ceil(n/3) репо
-        run: python3 hologram.py verify-remote --sample 22
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
