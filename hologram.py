@@ -7,7 +7,7 @@
 
 Источник вселенной: GitHub API (GITHUB_TOKEN необязателен), иначе universe.json.
 """
-import argparse, hashlib, json, os, random, sys, urllib.error, urllib.request
+import argparse, base64, hashlib, json, os, random, sys, time, urllib.error, urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 USER = "rtynbirf"
@@ -223,6 +223,58 @@ def fetch_shard(name):
     with urllib.request.urlopen(req, timeout=20) as resp:
         return json.load(resp)
 
+def gh_api(method, path, token, payload=None):
+    """Минимальный клиент Contents API (stdlib). Токен — только env, никогда строкой."""
+    req = urllib.request.Request(
+        API + path, method=method,
+        data=json.dumps(payload).encode() if payload is not None else None,
+        headers={"Accept": "application/vnd.github+json", "User-Agent": "hologram-deliver",
+                 **({"Authorization": "Bearer " + token} if token else {})})
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        body = resp.read()
+    return json.loads(body) if body else {}
+
+def cmd_deliver(a):
+    """Слой 1.3 — раздача: свежие осколки едут в носители. Замыкает контур:
+    ковка -> раздача -> сверка (verify-remote). Идемпотентно: осколок у носителя
+    совпал байт-в-байт — перезаписи нет, коммит-шторма не бывает. Требует токен
+    с правом записи (рука роя); архивы и замороженные не трогает по построению."""
+    token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN") or ""
+    if not token:
+        sys.exit("deliver требует токен записи: GITHUB_TOKEN (рука роя)")
+    uni, src = load_universe()
+    arch = archived_names()
+    storage = carriers(uni, arch)
+    shards, root = build(uni, a.r, storage)
+    pushed, skipped, errors = 0, 0, []
+    today = time.strftime("%Y-%m-%d")
+    for name, shard in shards.items():
+        payload = json.dumps(shard, ensure_ascii=False, indent=1).encode("utf-8")
+        path = f"/repos/{USER}/{name}/contents/{a.path}"
+        try:
+            cur = gh_api("GET", path, token)
+            same = cur.get("encoding") == "base64" and base64.b64decode(cur.get("content") or "") == payload
+            sha = cur.get("sha")
+        except Exception:
+            same, sha = False, None
+        if same:
+            skipped += 1
+            continue
+        body = {"message": f"ГОЛОГРАММА: осколок перезалит · корень {root[:16]} · такт {today}",
+                "content": base64.b64encode(payload).decode()}
+        if sha:
+            body["sha"] = sha
+        try:
+            gh_api("PUT", path, token, body)
+            pushed += 1
+        except Exception as e:
+            errors.append(f"{name}({type(e).__name__})")
+    print(f"DELIVER · источник={src} · корень={root[:16]}… · носителей={len(storage)}"
+          f" · перезалито={pushed} · уже цело={skipped} · ошибок={len(errors)}"
+          + (f" ({', '.join(errors)})" if errors else ""))
+    if errors:
+        sys.exit("раздача неполная — контур не замкнут")
+
 def cmd_verify_remote(a):
     """Слой 1.2 вживую: целое собирается из осколков, разложенных по самим репо.
 
@@ -270,4 +322,5 @@ if __name__ == "__main__":
     v = sp.add_parser("verify"); v.add_argument("--dir", default="hologram")
     c = sp.add_parser("curve"); c.add_argument("--trials", type=int, default=300)
     r = sp.add_parser("verify-remote"); r.add_argument("--sample", type=int, default=0); r.add_argument("--seed", type=int, default=31)
-    a = p.parse_args(); {"build": cmd_build, "verify": cmd_verify, "curve": cmd_curve, "verify-remote": cmd_verify_remote}[a.c](a)
+    d = sp.add_parser("deliver"); d.add_argument("--r", type=int, default=3); d.add_argument("--path", default="hologram.json")
+    a = p.parse_args(); {"build": cmd_build, "verify": cmd_verify, "curve": cmd_curve, "verify-remote": cmd_verify_remote, "deliver": cmd_deliver}[a.c](a)
