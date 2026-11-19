@@ -1,0 +1,12 @@
+# Зуб №10 (A-HUSH v2): очередь ПР-автомат — Dependabot приходит раз в неделю
+# и одним сгруппированным PR, а не частыми одиночными.
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    groups:
+      actions:
+        patterns:
+          - "*"
