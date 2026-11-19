@@ -1,4 +1,10 @@
 <div align="center">
+
+<a href="https://github.com/rtynbirf/hologram"><img src="banner.png" width="100%" alt="hologram — штандарт мастерской в каноне ORNAMENTAL MYTHO-REALISM"></a>
+
+</div>
+
+<div align="center">
   <img src="https://cdn.jsdelivr.net/gh/rtynbirf/hologram@main/banner.png" width="100%" alt="осколок знает целое: Merkle-осколки + Рид-Соломон (Целое из частей)" />
 </div>
 
@@ -17,7 +23,7 @@
 
 | ФАЙЛОВ | ПАПОК | КОММИТОВ | ОБНОВЛЕНО | РЕЛИЗОВ |
 |---:|---:|---:|---|---:|
-| 46 | 5 | 134 | 2026-11-19 | 0 |
+| 46 | 5 | 135 | 2026-11-19 | 0 |
 <!--ФОРЖ:ПАСПОРТ:КОНЕЦ-->
 
 # hologram — осколок знает целое
