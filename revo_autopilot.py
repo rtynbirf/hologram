@@ -10,7 +10,7 @@
 import hashlib, json, os, re, subprocess
 
 try:
-    CFG = json.loads(r'''{"name": "hologram", "num": 26, "school": "НОВОСТРОЙ РОЯ", "desc": "осколок знает целое: Merkle-осколки + Рид-Соломон (Целое из любых k из n), 64 репо вселенной, стратегия слоёв", "topics": ["data-integrity", "erasure-coding", "merkle-tree", "pid1"], "releases": 0, "palette": {"bg": "#0C2E21", "bg2": "#14402E", "ink": "#EFE7D2", "gold": "#D4AF37", "gold2": "#E8C868", "dim": "#8FB09C", "accent": "#C43B27"}}''')
+    CFG = json.loads(r'''{"name": "hologram", "num": 66, "school": "МЕРКЛ · ОСКОЛКИ", "desc": "осколок знает целое: Merkle-осколки + Рид-Соломон (Целое из любых k из n), 64 репо вселенной, стратегия слоёв", "topics": ["data-integrity", "erasure-coding", "merkle-tree", "pid1"], "releases": 0, "palette": {"bg": "#10243E", "bg2": "#1B3B5F", "ink": "#F3ECD9", "gold": "#D4AF37", "gold2": "#E8C868", "dim": "#8FA3BF", "accent": "#D5281B"}}''')
 except Exception:
     CFG = {"name": "REVO", "num": 0, "school": "", "desc": "", "topics": [], "releases": 0,
            "palette": dict(bg="#EFE6CF", bg2="#F6EFDC", ink="#241C10", gold="#9A7B23",
