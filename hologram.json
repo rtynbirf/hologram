@@ -1,8 +1,8 @@
 {
  "hologram": 1,
- "root": "f9cae3a874a9064bc1ccba9db8e0255366799943b735f2a8be5b259b79316d23",
+ "root": "4bcb8a068871f9158f688c6941bf4b381477a19c0c45283c73811c92000edb94",
  "n": 79,
- "storage": 44,
+ "storage": 74,
  "r": 3,
  "self": {
   "name": "hologram",
@@ -109,7 +109,7 @@
   },
   {
    "name": "global-practice-atlas",
-   "hash": "a67f05603d13bf1c7da83d003c8bc9e48ea60dd0e166e1fd2eea58b60f9dd304"
+   "hash": "420b94983834f6bc6de962c180368b34a79340d2a0e638eeeddc040fd7717feb"
   },
   {
    "name": "global-video-platforms-registry",
@@ -330,26 +330,8 @@
  ],
  "flesh": [
   {
-   "name": "cell65-host",
-   "desc": "cell65-host — Антицензор (Chrome MV3): PAC/DNR/WebRTC-защита, hosts-блокировка, обход блокировок",
-   "lang": "JavaScript",
-   "cluster": "OS"
-  },
-  {
-   "name": "free-man",
-   "desc": "FREE MAN 0.2.2 — browser autonomy for Chrome MV3. 108 tracker/ads/CNAME domains blocked 100% on-device. No account, no cloud, no telemetry.",
-   "lang": "Python",
-   "cluster": ""
-  },
-  {
    "name": "github-runbook",
    "desc": "Ранбук: настройка GitHub-репозитория человеком для человека — все флаги Settings, ветки и защита (Free vs Pro), безопасность, проверенная API-шпаргалка, журнал верификации",
-   "lang": "Python",
-   "cluster": ""
-  },
-  {
-   "name": "khozyain",
-   "desc": "ХОЗЯИН ДОМА — аккаунт-уровневый автомат состояния: зелёные main, живые триггеры, ноль открытых состояний и ноль уведомлений. Слой 3 дома поверх repo-doctrine и domovoy-ritual",
    "lang": "Python",
    "cluster": ""
   },
@@ -358,12 +340,6 @@
    "desc": "ЛАКОРНИЯ · MEGA-PLAYER SINGULYAR",
    "lang": "HTML",
    "cluster": "HUB"
-  },
-  {
-   "name": "voice-atlas-llm",
-   "desc": "Атлас-LLM: модель-эксперт по клонированию голоса (дизентанглмент, TTS/VC/SVC/SVS) — LoRA-обучение на корпусе атласа 2026, RAG, гейты качества",
-   "lang": "Python",
-   "cluster": "ATLASES"
   }
  ]
 }
