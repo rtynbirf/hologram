@@ -14,13 +14,25 @@
 
 <!--ФОРЖ:ПАСПОРТ:НАЧАЛО-->
 <div align="center">
-  <img src="revo-page.svg" width="100%" alt="РЕВО-паспорт страницы hologram в каноне ORNAMENTAL MYTHO-REALISM: орнаментальная решётка, медальон-миф, строение файлов, лексикон — по фактическому контенту" />
+  <img src="revo-page.svg" width="100%" alt="РЕВО-паспорт страницы hologram №66 в каноне ORNAMENTAL MYTHO-REALISM: орнаментальная решётка, медальон-миф, строение файлов, лексикон — по фактическому контенту" />
 </div>
 
 | ФАЙЛОВ | ПАПОК | КОММИТОВ | ОБНОВЛЕНО | РЕЛИЗОВ |
 |---:|---:|---:|---|---:|
-| 56 | 6 | 199 | 2026-11-28 | 0 |
+| 56 | 6 | 1 | 2026-11-28 | 3 |
 <!--ФОРЖ:ПАСПОРТ:КОНЕЦ-->
+
+# hologram
+
+<div align="center">
+
+<a href="https://github.com/rtynbirf/hologram"><img src="banner.png" width="100%" alt="hologram — штандарт мастерской в каноне ORNAMENTAL MYTHO-REALISM"></a>
+
+</div>
+
+
+
+
 
 # hologram
 
