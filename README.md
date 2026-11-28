@@ -4,10 +4,6 @@
 
 </div>
 
-<div align="center">
-  <img src="https://cdn.jsdelivr.net/gh/rtynbirf/hologram@main/banner.png" width="100%" alt="осколок знает целое: Merkle-осколки + Рид-Соломон (Целое из частей)" />
-</div>
-
 <!--ФОРЖ:МУЗА:НАЧАЛО-->
 <div align="center">
   <img src="https://cdn.jsdelivr.net/gh/rtynbirf/hologram@main/repo-muse.svg" width="100%" alt="Муза hologram: мастерская МЕРКЛ · ОСКОЛКИ, кузня ПОЛИМАТ, раунд 12 · REVE=РЕВО" />
@@ -18,13 +14,31 @@
 
 <!--ФОРЖ:ПАСПОРТ:НАЧАЛО-->
 <div align="center">
-  <img src="revo-page.svg" width="100%" alt="РЕВО-паспорт страницы hologram в каноне ORNAMENTAL MYTHO-REALISM: орнаментальная решётка, медальон-миф, строение файлов, лексикон — по фактическому контенту" />
+  <img src="revo-page.svg" width="100%" alt="РЕВО-паспорт страницы hologram №66 в каноне ORNAMENTAL MYTHO-REALISM: орнаментальная решётка, медальон-миф, строение файлов, лексикон — по фактическому контенту" />
 </div>
 
 | ФАЙЛОВ | ПАПОК | КОММИТОВ | ОБНОВЛЕНО | РЕЛИЗОВ |
 |---:|---:|---:|---|---:|
-| 56 | 6 | 197 | 2026-11-28 | 0 |
+| 56 | 6 | 1 | 2026-11-28 | 3 |
 <!--ФОРЖ:ПАСПОРТ:КОНЕЦ-->
+
+# hologram
+
+<p align="center"><img src="https://cdn.jsdelivr.net/gh/rtynbirf/hologram@main/.github/social-preview.png" alt="hologram" width="100%"></p>
+
+<div align="center">
+
+<a href="https://github.com/rtynbirf/hologram"><img src="banner.png" width="100%" alt="hologram — штандарт мастерской в каноне ORNAMENTAL MYTHO-REALISM"></a>
+
+</div>
+
+<div align="center">
+  <img src="https://cdn.jsdelivr.net/gh/rtynbirf/hologram@main/banner.png" width="100%" alt="осколок знает целое: Merkle-осколки + Рид-Соломон (Целое из частей)" />
+</div>
+
+
+
+
 
 # hologram — осколок знает целое
 
@@ -62,3 +76,5 @@ EC-осколков Рида—Соломона — в Release v1.2.0: любы�
 - `doors.json` — нумерация дверей дома (52 двери; Door Zero вне нумерации).
 - `intent.log` — журнал намерений (слой 2, append-only).
 - `tests/` + CI «ГОЛОГРАММА · целое из репо»: юниты математики + ежедневная живая сборка целого из GitHub.
+
+<!--ФОРЖ:ПОДВАЛ-->
